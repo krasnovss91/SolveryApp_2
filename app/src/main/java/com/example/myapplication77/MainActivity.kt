@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
                 //       textView.setText(value_1 + value_2)
                 Log.d("result", "$value_1 $value_2")
 
-                val text = editText_1.text
-                val toast = Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT)
+                val toast = Toast.makeText(applicationContext, value_1 + value_2, Toast.LENGTH_SHORT)
                 toast.show()
 
             }
