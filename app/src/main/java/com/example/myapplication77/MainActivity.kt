@@ -1,5 +1,6 @@
 package com.example.myapplication77
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,13 +21,18 @@ class MainActivity : AppCompatActivity() {
         val editText_1 = findViewById<EditText>(R.id.editTextTextPersonName1)
         val editText_2 = findViewById<EditText>(R.id.editTextTextPersonName2)
 
-        /*
-        val button = findViewById<AppCompatButton>(R.id.parent)
-        button.setOnClickListener {
-             Log.d("text1",editText_1.text.toString())
-             Log.d("text2",editText_2.text.toString())
-        }
-         */
+        val button = findViewById<AppCompatButton>(R.id.button)
+
+        button.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+                //Your code here
+                val value_1 = editText_1.text.toString()
+                val value_2 = editText_2.text.toString()
+         //       textView.setText(value_1 + value_2)
+            }
+        })
+
+
     }
-   // https://stackoverflow.com/questions/19181362/stash-the-value-of-edittext-into-an-variable-and-print-it-into-logcat
+
 }
