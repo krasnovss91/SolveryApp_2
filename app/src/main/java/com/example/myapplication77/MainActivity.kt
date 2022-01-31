@@ -16,20 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = findViewById<TextView>(R.id.text)
-
-
         val editText_1 = findViewById<EditText>(R.id.editTextTextPersonName1)
         val editText_2 = findViewById<EditText>(R.id.editTextTextPersonName2)
+        val textView = findViewById<TextView>(R.id.textView3)
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                //Your code here
                 val value_1 = editText_1.text.toString()
                 val value_2 = editText_2.text.toString()
-                //       textView.setText(value_1 + value_2)
+                       textView.setText(value_1 + value_2)
                 Log.d("result", "$value_1 $value_2")
 
                 val toast = Toast.makeText(applicationContext, value_1 + value_2, Toast.LENGTH_SHORT)
