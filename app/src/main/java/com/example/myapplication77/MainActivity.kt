@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 val value_1 = editText_1.text.toString()
                 val value_2 = editText_2.text.toString()
-                       textView.setText(value_1 + value_2)
+                          textView.setText(value_1 + " " +value_2)
                 Log.d("result", "$value_1 $value_2")
 
                 val toast = Toast.makeText(applicationContext, value_1 + value_2, Toast.LENGTH_SHORT)
