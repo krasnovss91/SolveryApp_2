@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 val value_1 = editText_1.text.toString()
                 val value_2 = editText_2.text.toString()
          //       textView.setText(value_1 + value_2)
+                Log.d("result", "$value_1 $value_2")
             }
         })
 
