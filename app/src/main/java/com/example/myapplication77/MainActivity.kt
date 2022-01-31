@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View;
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 
 class MainActivity : AppCompatActivity() {
@@ -23,16 +24,20 @@ class MainActivity : AppCompatActivity() {
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
-        button.setOnClickListener(object : View.OnClickListener{
+        button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 //Your code here
                 val value_1 = editText_1.text.toString()
                 val value_2 = editText_2.text.toString()
-         //       textView.setText(value_1 + value_2)
+                //       textView.setText(value_1 + value_2)
                 Log.d("result", "$value_1 $value_2")
+
+                val text = editText_1.text
+                val toast = Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT)
+                toast.show()
+
             }
         })
-
 
     }
 
