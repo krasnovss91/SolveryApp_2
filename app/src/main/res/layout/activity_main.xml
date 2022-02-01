@@ -33,11 +33,6 @@
         tools:layout_editor_absoluteY="110dp"
         tools:ignore="MissingConstraints" />
 
-    <!--
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
--->
-
 
     <Button
         android:id="@+id/button"
@@ -57,14 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintLeft_toRightOf="@id/button"
+        app:layout_constraintLeft_toLeftOf="@id/button"
         app:layout_constraintTop_toBottomOf="@id/button"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="328dp" />
-    <!--
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
