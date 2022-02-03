@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
-    //    val counter = savedInstanceState.get("textView")
+        val savedState = savedInstanceState?.get("textView")// а теперь достанем его
 
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
