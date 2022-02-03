@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
+    //    val counter = savedInstanceState.get("textView")
+
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 val value_1 = editText_1.text.toString()
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+        outState.putString("textView", R.id.textView3.toString())//сюда положить результат работы приложения, он в textView3
     }
 
 }
