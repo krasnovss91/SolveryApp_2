@@ -18,11 +18,15 @@ class MainActivity : AppCompatActivity() {
 
         val editText_1 = findViewById<EditText>(R.id.editTextTextPersonName1)
         val editText_2 = findViewById<EditText>(R.id.editTextTextPersonName2)
-        val textView = findViewById<TextView>(R.id.textView3)//сделать проверку на null, если да - достать из сохранённого состояния
+        var textView = findViewById<TextView>(R.id.textView3)//сделать проверку на null, если да - достать из сохранённого состояния
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
         val savedState = savedInstanceState?.get("textView")// а теперь достанем его
+
+        if(textView.equals(null)){
+            textView = savedState as TextView?
+        }
 
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
