@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val editText_1 = findViewById<EditText>(R.id.editTextTextPersonName1)
         val editText_2 = findViewById<EditText>(R.id.editTextTextPersonName2)
-        val textView = findViewById<TextView>(R.id.textView3)
+        val textView = findViewById<TextView>(R.id.textView3)//сделать проверку на null, если да - достать из сохранённого состояния
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
