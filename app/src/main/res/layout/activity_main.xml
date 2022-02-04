@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<!--использовать LinearLayout и FrameLayout.
- первый упорядочивает либо по горизонтали, либо по вертикали, второй предназначен для отображения только одного элемента
- Как вариант - Текстовые поля помещаем в LinearLayout, кнопку и поле с результатом- во FrameLa ut-->
+
     <EditText
         android:id="@+id/editTextTextPersonName1"
         android:layout_width="143dp"
@@ -17,9 +15,9 @@
         android:text="Field1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -27,36 +25,36 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Field2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Field2"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="110dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="110dp" />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="280dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="280dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintLeft_toLeftOf="@id/button"
+            app:layout_constraintTop_toBottomOf="@id/button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="328dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintLeft_toLeftOf="@id/button"
-        app:layout_constraintTop_toBottomOf="@id/button"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="328dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

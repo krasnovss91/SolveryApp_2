@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val button = findViewById<AppCompatButton>(R.id.button)
 
-        val savedState = savedInstanceState?.get("textView")// а теперь достанем его
+        val savedState = savedInstanceState?.getString("textView")// а теперь достанем его через getString(textView)
 
         if(textView.equals(null)){
             textView = savedState as TextView?
@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("textView", R.id.textView3.toString())//сюда положить результат работы приложения, он в textView3
+        outState.putString("textView", findViewById<TextView>(R.id.textView3).toString())//сюда положить результат работы приложения, он в textView3
+            //как в 21 строке и вызвать text
     }
 
 }
